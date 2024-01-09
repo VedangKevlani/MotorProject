@@ -1,0 +1,172 @@
+body,html {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body .secondcontainer {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-image: url("images/homeimage.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.menu {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:#b10c4b;
+}
+
+.logo {
+    float: left;
+    position: absolute;
+    font-size: 1.5em;
+    height: 30px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  } 
+
+.menu a {
+    float: right;
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.submenu {
+    float: right;
+    overflow: hidden;
+}
+
+.submenu .submenu1btn,
+.submenu .submenu2btn,
+.submenu .submenu3btn,
+.submenu .submenu4btn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    top: 45px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.menu a:hover,
+.submenu:hover .submenu1btn,
+.submenu:hover .submenu2btn,
+.submenu:hover .submenu3btn,
+.submenu:hover .submenu4btn {
+    background-color: black;
+}
+
+.submenucont {
+    display: none;
+    position: fixed;
+    right: 0;
+    background-color: black;
+    width: 100%;
+    z-index: 1;
+}
+
+.submenucont a {
+    float: right;
+    color: white;
+    text-decoration: none;
+}
+
+.submenucont a:hover {
+    background-color: rgb(192, 3, 3);
+    color: white;
+}
+
+.submenu:hover .submenucont {
+    display: block;
+}
+
+.homesearch {
+    width: 100%;
+    min-height: 100vh;
+    padding: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-bar {
+    width: 100%;
+    max-width: 700px;
+    background: rgba(255,255,255,0.2);
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    padding: 10px 20px;
+    backdrop-filter: blur(4px) saturate(180%);
+
+}
+
+.search-bar input {
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 24px 20px;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+::placeholder {
+    color:#cac7ff;
+}
+
+.search-bar button img {
+    width: 25px;
+}
+
+.search-bar button {
+    border: 0;
+    border-radius:  50%;
+    width: 60px;
+    height: 60px;
+    background: #cac7ff;
+    cursor: pointer;
+}
+
+h1, h2, h3 {
+    color: rgb(218, 181, 181);
+    display: flex;
+    align-items: center;
+    position: center;
+    justify-content: center;
+}
+
+.hometext {
+    width: 100%;
+    margin: 0;
+    height: auto;
+    overflow: hidden;
+    background-color: #000000;
+}
+
+.footer {
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    background-color: #b10c4b;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
