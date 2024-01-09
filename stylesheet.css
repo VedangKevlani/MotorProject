@@ -2,15 +2,15 @@ body,html {
     width: 100%;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
-}
-
-body .secondcontainer {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     background-image: url("images/homeimage.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    overflow-x: hidden;
+}
+
+body .secondcontainer {
     margin: 0;
     width: 100%;
     min-height: 100vh;
@@ -108,11 +108,35 @@ body .secondcontainer {
     max-width: 700px;
     background: rgba(255,255,255,0.2);
     display: flex;
+    position: inherit;
     align-items: center;
     border-radius: 60px;
     padding: 10px 20px;
     backdrop-filter: blur(4px) saturate(180%);
 
+}
+
+.resultsbox ul {
+    width: 70%;
+    border-top: 1px solid #999;
+    padding: 10px 20px;
+    align-items: center;
+    position: relative;
+}
+
+.resultsbox li {
+    list-style: none;
+    border-radius: 3px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: white;
+    border: none;
+    outline: 0;
+}
+
+.resultsbox ul li:hover {
+    background-color: #a7a4e6;
 }
 
 .search-bar input {
@@ -125,7 +149,7 @@ body .secondcontainer {
     color: #ffffff;
 }
 
-::placeholder {
+.search-bar input ::placeholder {
     color:#cac7ff;
 }
 
@@ -158,6 +182,14 @@ h1, h2, h3 {
     background-color: #000000;
 }
 
+p {
+    width: auto;
+    color: white;
+    background-color: transparent;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+}
+
 .footer {
     width: 100%;
     margin: 0;
@@ -169,4 +201,10 @@ h1, h2, h3 {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.resultsbox {
+    max-height: 300px;
+    overflow-x: auto;
+    overflow-y: auto;
 }
