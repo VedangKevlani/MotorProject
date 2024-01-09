@@ -1,0 +1,8 @@
+"Take the Practice Test",
+"Find certified driving instructors",
+"Buy the Driver Guide book",
+"Buy the Automotive Guide book",
+"Find the nearest examination centres",
+"Take the Driver Test",
+"Apply for Learner Permit",
+"Learn Road Safety Regulations",
