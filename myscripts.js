@@ -1,10 +1,9 @@
 let keywords = [
-   'take',
-   'learn',
-   'practice',
-   'test',
-   'learner test',
-   'driver test',
+   'practice for the learner test',
+   'practice for the driver test',
+   'learn how to drive',
+   'take the learner test',
+   'take the driver test',
    'apply for learner permit',
    'apply for driver licence',
    'apply for driver licence renewal',
@@ -22,29 +21,50 @@ let keywords = [
 document.addEventListener('DOMContentLoaded', function() {
     const resultsBox = document.querySelector(".resultsbox");
     const inputBox = document.getElementById("input-box");
+    const searchForm = document.getElementById(".search-bar")
+
+    resultsBox.addEventListener('click', function (event) {
+        if (event.target.tagName === 'LI') {
+            selectInput(event.target.textContent);
+        }
+    });
 
     inputBox.addEventListener('input', function() {
         let input = inputBox.value;
         let result = [];
         if(input.length) {
             result = keywords.filter(keyword => keyword.toLowerCase().includes(input.toLowerCase()));
+            if(!result.length) {
+                result = ['Nothing typed or no matching suggestions.'];
+            }
+        }
+        else {
+            result = ['Popular search suggestions will appear here.'];
         }
         display(result);
+    });
 
-        if(!result.length){
-            resultsBox.innerHTML = '';
-        }
+    searchForm.addEventListener('submit', function (event) {
+        // Prevent the form from submitting and refreshing the page
+        event.preventDefault();
     });
 
     function display(result) {
-        const content = result.map(list => {
-            return "<li onclick='selectInput(\"" + list + "\")'>" + list + "</li>";
+        const content = result.map((list) => {
+                return "<li onclick='selectInput(\'" + list + "\")'>" + list + "</li>";
         });
         resultsBox.innerHTML = "<ul>" + content.join('') + "</ul>";
     }
 
     function selectInput(selectedText) {
         inputBox.value = selectedText;
+        if(inputBox.value.includes("take") && inputBox.value.includes("learner")) {
+            window.location.href = 'learnertest.html' + selectedText.toLowerCase().replace(/\s/g, '-');
+        }
+        else if (inputBox.value.includes("take") && inputBox.value.includes("driver")){
+            window.location.href = 'drivertest.html' + selectedText.toLowerCase().replace(/\s/g, '-');
+        }
         resultsBox.innerHTML = '';
     }
+
 });
