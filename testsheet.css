@@ -3,11 +3,6 @@ body,html {
     margin: 0;
     padding: 0;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    background-image: url("images/homeimage.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    overflow-x: hidden;
 }
 
 body .secondcontainer {
@@ -98,93 +93,14 @@ body .secondcontainer {
     display: block;
 }
 
-.homesearch {
-    width: 100%;
-    min-height: 100vh;
-    padding: 5%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.search-bar {
-    width: 100%;
-    max-width: 700px;
-    background: rgba(255,255,255,0.2);
-    display: flex;
-    position: inherit;
-    align-items: center;
-    border-radius: 60px;
-    padding: 10px 20px;
-    backdrop-filter: blur(4px) saturate(180%);
-
-}
-
-.resultsbox ul {
-    margin: 0;
-    width: 70%;
-    border-top: 1px solid #999;
-    padding: 10px 20px;
-    align-items: center;
-    position: relative;
-}
-
-.resultsbox li {
-    list-style: none;
-    border-radius: 3px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding: 10px 20px;
-    cursor: pointer;
-    color: white;
-    border: none;
-    outline: 0;
-}
-
-.resultsbox ul li:hover {
-    background-color: #a7a4e6;
-}
-
-.search-bar input {
-    background: transparent;
-    flex: 1;
-    border: 0;
-    outline: none;
-    padding: 24px 20px;
-    font-size: 20px;
-    color: #ffffff;
-}
-
-.search-bar input ::placeholder {
-    color:#cac7ff;
-}
-
-.search-bar button img {
-    width: 25px;
-}
-
-.search-bar button {
-    border: 0;
-    border-radius:  50%;
-    width: 60px;
-    height: 60px;
-    background: #cac7ff;
-    cursor: pointer;
-}
-
 h1, h2, h3 {
-    color: rgb(218, 181, 181);
+    padding: 10px;
+    color: white;
     display: flex;
     align-items: center;
     position: center;
     justify-content: center;
-}
-
-.hometext {
-    width: 100%;
-    margin: 0;
-    height: auto;
-    overflow: hidden;
-    background-color: #000000;
+    overflow: auto;
 }
 
 p {
@@ -193,6 +109,15 @@ p {
     background-color: transparent;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16px;
+}
+
+button {
+    display: flex;
+    float: center;
+    background: transparent;
+    border: none;
+    margin: auto;
+    align-items: center;
 }
 
 .footer {
@@ -208,15 +133,29 @@ p {
     justify-content: center;
 }
 
-.resultsbox {
-    position: absolute;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 16px;
-    font-weight: 100;
-    top: 90%; 
-    right: 42%;
-    max-height: 300px;
-    overflow-x: auto;
-    overflow-y: auto;
-    background-color: transparent;  
+.split {
+    height: auto;
+    width: 100%;
+    display: flex;
+}
+
+.top {
+    left: 0;
+    padding: 20px;
+    background-color: #ad3e72;
+    box-sizing: border-box;
+}
+
+.bottom {
+    right: 0;
+    padding: 20px;
+    background-color: red;
+    box-sizing: border-box;
+}
+
+.top,
+.bottom {
+      flex: 1;
+      overflow: hidden;
+      box-sizing: border-box;
 }

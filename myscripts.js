@@ -58,11 +58,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function selectInput(selectedText) {
         inputBox.value = selectedText;
-        if(inputBox.value.includes("take") && inputBox.value.includes("learner")) {
-            window.location.href = 'learnertest.html' + selectedText.toLowerCase().replace(/\s/g, '-');
+
+        const lowerCaseInput = inputBox.value.toLowerCase();
+        if(lowerCaseInput.includes("take") && lowerCaseInput.includes("learner")) {
+            window.location.href = 'learnertest.html?query=' + encodeURIComponent(selectedText.toLowerCase().replace(/\s/g, '-'));
         }
-        else if (inputBox.value.includes("take") && inputBox.value.includes("driver")){
-            window.location.href = 'drivertest.html' + selectedText.toLowerCase().replace(/\s/g, '-');
+        else if (lowerCaseInput.includes("take") && lowerCaseInput.includes("driver")){
+            window.location.href = 'drivertest.html?query=' + encodeURIComponent(selectedText.toLowerCase().replace(/\s/g, '-'));
         }
         resultsBox.innerHTML = '';
     }
