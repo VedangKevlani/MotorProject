@@ -6,9 +6,11 @@
     <title>DriveTo Practice Learners</title>
     <link rel="stylesheet" type="text/css" href="quiz.css">
     <link rel="icon" type="image/x-icon" href="images/DRIVETOjamaica.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-...." crossorigin="anonymous" />
+
 </head>
 <body>
-    <script src="myscripts.js"></script>
+    <script type="module" src="learn.js"></script>
     <header>
             <nav>
                 <!-- Beginning of Menu -->
@@ -57,31 +59,34 @@
             <!-- Ending of Menu -->
             </nav>
     </header>
-    <div class="wrapper">
-        <div class="quiz-container">
-            <div class="quiz-header">
-                <h1 class="quiz-title">Learner's Quiz</h1>
-                <div class="quiz-score flex">
-                    <span id="correct-score">0</span>/<span id="total-questions">20</span>
+    <div class="parent-container">
+        <div class="wrapper">
+            <div class="quiz-container">
+                <div class="quiz-header">
+                    <h1 class="quiz-title">Learner's Quiz</h1>
+                    <div class="quiz-score flex">
+                        <span id="correct-score">0</span>/<span id="total-question">20</span>
+                    </div>
                 </div>
-            </div>
-            <div class="quiz-body">
-                <h2 class="quiz-question" id="question">What does the road sign H indicate? <br><span class="category">Category: Road Signs</span></h2>
-                <ul class="quiz-options">
-                    <li>A. Highway Ahead</li>
-                    <li>B. Intersection Ahead</li>
-                    <li>C. High Bridge</li>
-                    <li>D. Hospital Ahead</li>
-                </ul>
-                <div id="question-result">
-
-                </div>
-                <div class="quiz-footer">
-                    <button type="button" id="check-answer">Check Answer</button>
-                    <button type="button" id="play-again">Play Again</button>
+                <div class="quiz-body">
+                    <h2 class="quiz-question" id="question">What does the road sign H indicate? <br><span class="category">Category: Road Signs</span></h2>
+                    <ul class="quiz-options">
+                        <li>A. Highway Ahead</li>
+                        <li>B. Intersection Ahead</li>
+                        <li>C. High Bridge</li>
+                        <li>D. Hospital Ahead</li>
+                    </ul>
+                    <div id="question-result">
+    
+                    </div>
+                    <div class="quiz-footer">
+                        <button type="button" id="check-answer">Check Answer</button>
+                        <button type="button" id="play-again">Play Again</button>
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="split right"></div>
     </div>
 </body>
 </html>

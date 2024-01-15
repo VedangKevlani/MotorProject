@@ -60,10 +60,10 @@ document.addEventListener('DOMContentLoaded', function() {
         inputBox.value = selectedText;
 
         const lowerCaseInput = inputBox.value.toLowerCase();
-        if(lowerCaseInput.includes("take") && lowerCaseInput.includes("learner")) {
+        if(lowerCaseInput.includes("take") || lowerCaseInput.includes("practice") && lowerCaseInput.includes("learner")) {
             window.location.href = 'learnertest.html?query=' + encodeURIComponent(selectedText.toLowerCase().replace(/\s/g, '-'));
         }
-        else if (lowerCaseInput.includes("take") && lowerCaseInput.includes("driver")){
+        else if (lowerCaseInput.includes("take") || lowerCaseInput.includes("practice") && lowerCaseInput.includes("driver")){
             window.location.href = 'drivertest.html?query=' + encodeURIComponent(selectedText.toLowerCase().replace(/\s/g, '-'));
         }
         resultsBox.innerHTML = '';

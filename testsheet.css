@@ -103,6 +103,10 @@ h1, h2, h3 {
     overflow: auto;
 }
 
+a {
+    color: cyan;
+}
+
 p {
     width: auto;
     color: white;
@@ -115,6 +119,7 @@ button {
     display: flex;
     float: center;
     background: transparent;
+    color: white;
     border: none;
     margin: auto;
     align-items: center;
