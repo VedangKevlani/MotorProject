@@ -66,6 +66,9 @@ document.addEventListener('DOMContentLoaded', function() {
         else if (lowerCaseInput.includes("take") || lowerCaseInput.includes("practice") && lowerCaseInput.includes("driver")){
             window.location.href = 'drivertest.html?query=' + encodeURIComponent(selectedText.toLowerCase().replace(/\s/g, '-'));
         }
+        if(lowerCaseInput.includes("statistics")) {
+            window.location.href = 'roadstats.html?query=' + encodeURIComponent(selectedText.toLowerCase().replace(/\s/g, '-'));
+        }
         resultsBox.innerHTML = '';
     }
 

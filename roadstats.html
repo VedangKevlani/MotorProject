@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DriveTo Driver Test</title>
-    <link rel="stylesheet" type="text/css" href="quizdriver.css">
+    <title>DriveTo Road Statistics</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
     <link rel="icon" type="image/x-icon" href="images/DRIVETOjamaica.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-...." crossorigin="anonymous" />
 </head>
-<body>
-    <script type="module" src="drive.js"></script>
+<body> 
+    <script src="myscripts.js"></script>
     <header>
         <nav>
             <!-- Beginning of Menu -->
@@ -26,7 +25,7 @@
                         <!-- SubMenu 1 content -->
                         <div class="submenucont">
                             <a href="learnertest.html">Learner Test</a>
-                            <a href="src/drivertest.html">Driver Test</a>
+                            <a href="drivertest.html">Driver Test</a>
                         </div>
                     </div>
                     <div class="submenu">
@@ -58,34 +57,18 @@
         <!-- Ending of Menu -->
         </nav>
     </header>
-    <div class="parent-container">
-        <div class="wrapper">
-            <div class="quiz-container">
-                <div class="quiz-header">
-                    <h1 class="quiz-title">Driver's Quiz (More Advanced)</h1>
-                    <div class="quiz-score flex">
-                        <span id="correct-score">0</span>/<span id="total-question">20</span>
-                    </div>
-                </div>
-                <div class="quiz-body">
-                    <h2 class="quiz-question" id="question">While driving you hear a siren sounding behind your vehicle, you should...<br><span class="category">Category: Driving in special situations</span></h2>
-                    <ul class="quiz-options">
-                        <li>A. Drive faster</li>
-                        <li>B. Pull over and stop</li>
-                        <li>C. Stop</li>
-                        <li>D. Step out of the vehicle</li>
-                    </ul>
-                    <div id="question-result">
-    
-                    </div>
-                    <div class="quiz-footer">
-                        <button type="button" id="check-answer">Check Answer</button>
-                        <button type="button" id="play-again">Play Again</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="split right"></div>
+    <div class="hometext">
+        <h2>The Road Statistics Charts below emphasize the importance of cutting down on speed and exercising caution.</h2>
+        <a href="https://mtm.gov.jm/roadsafety/images/Reports_And_Statistics/Annually/2018/Crash_Report_December_31_2018.pdf">Source: Ministry of Transport and Mining Annual Crash Report 2018 Page 1,2</a>
+    </div>
+    <div class="embeds">
+        <iframe src="/src/barchart.html" width="600" height="600" frameborder="0" scrolling="no"></iframe>
+    </div>
+    <div class="footer">
+        <footer>
+            <p>Created by Vedang Kevlani. Available on GitHub @VedangKevlani.</p>
+            <p>Email address: kevlanivedang28@gmail.com. Visit the GitHub to find my LinkedIn.</p>
+        </footer>
     </div>
 </body>
 </html>

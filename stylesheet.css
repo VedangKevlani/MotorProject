@@ -187,6 +187,17 @@ h1, h2, h3 {
     background-color: #000000;
 }
 
+.embeds {
+    background-color: black;
+    display: flex;
+    float: left;
+    overflow: hidden;
+}
+
+a {
+    color: aqua;
+}
+
 p {
     width: auto;
     color: white;

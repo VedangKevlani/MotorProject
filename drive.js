@@ -1,6 +1,6 @@
 // mainQuizFile.js
 
-import customQuestions from './questionslearners.js';
+import driverQuestions from './drivequestions.js';
 
 const _question = document.getElementById('question');
 const _options = document.querySelector('.quiz-options');
@@ -10,7 +10,7 @@ const _result = document.getElementById('question-result');
 const _correctScore = document.getElementById('correct-score');
 const _totalQuestion = document.getElementById('total-question');
 
-let correctAnswer = "", correctScore = 0, totalQuestion = customQuestions.length;
+let correctAnswer = "", correctScore = 0, totalQuestion = driverQuestions.length;
 let askedCount = 0;
 
 // event listeners
@@ -112,6 +112,6 @@ function restartQuiz(){
 
 // load question function modified to use customQuestions
 function loadQuestion(){
-    const randomQuestion = customQuestions[Math.floor(Math.random() * customQuestions.length)];
+    const randomQuestion = driverQuestions[Math.floor(Math.random() * driverQuestions.length)];
     showQuestion(randomQuestion);
 }
