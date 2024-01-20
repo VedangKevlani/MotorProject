@@ -125,6 +125,11 @@ button {
     align-items: center;
 }
 
+.hometext {
+    background-color: black;
+    overflow: hidden;
+}
+
 .footer {
     width: 100%;
     margin: 0;
